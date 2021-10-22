@@ -69,7 +69,7 @@ void shearlny(int x1,int y1,int x2,int y2)
   line(x1,y1,x2,y2);
 }
 
-void shearlnxy(int x1,int y1,int x2,int y2)
+void shearlnxy(int x1,int y1,int x2,int y2) //this is change
 { int a1=x1,a2=x2;
   x1=x1+y1*factor;
   x2=x2+y2*factor;
@@ -97,7 +97,7 @@ void shearsquare()
   line(x2,y2,x3,y3);
   line(x3,y3,x4,y4);
   line(x4,y4,x1,y1);
-  setcolor(RED);
+  setcolor(GREEN);
   shearsqx(x1,y1,x2,y2,x3,y3,x4,y4);
   shearsqy(x1,y1,x2,y2,x3,y3,x4,y4);
   shearsqxy(x1,y1,x2,y2,x3,y3,x4,y4);
