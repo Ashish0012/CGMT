@@ -1,12 +1,13 @@
 #include<stdio.h>
 #include<conio.h>
 #include<graphics.h>
+
 void main()
-{ int pts[]={320,150,400,250,250,350,320,150}; //Points for drawpoly
+{ int pts[]={320,150,400,250,250,350,320,150}; 
   int gd=DETECT,gmode,color,maxx,maxy; //Variable declaration
-  initgraph(&gd,&gmode,"C:\\TURBOC3\\BGI"); //Initializing graphics
-  maxx=getmaxx(); //Getting length of the screen
-  maxy=getmaxy(); //Getting breadth of the screen
+  initgraph(&gd,&gmode,"C:\\TURBOC3\\BGI"); 
+  maxx=getmaxx(); 
+  maxy=getmaxy(); 
   printf("\nDimensions of the canvas is %d X %d .",maxx,maxy);
   printf("\n\nDrawing a circle :-");
   circle(100,130,50); //Drawing the circle at (100,100) of radius 50 pixels
@@ -18,6 +19,7 @@ void main()
   printf("\n\n\nDrawing a line :-");
   line(30,280,220,380); //Drawing a line
   gotoxy(42,4); //Placing cursor
+  maxx=getmaxx();
   printf("Drawing a line usng 'lineto' :-");
   moveto(540,85); //Moving to the location
   lineto(350,180); //Drawing a line fron cursor location to (350,180)
@@ -27,6 +29,7 @@ void main()
   gotoxy(1,25); //Putting cursor on the location
   printf("\n\nPress any key to goto next screen...");
   getch(); //Pause to get user input
+  maxx=getmaxx();
   cleardevice(); //Clearing screen
   line(0,220,maxx,220); //Horizontal line
   line(320,30,320,maxy-80); //Vertical line
@@ -35,6 +38,7 @@ void main()
   pieslice(100,200,20,120,120); //Drawing a Pieslice
   gotoxy(42,3); //Placing cursor on new location
   printf("Drawing a Ellipse :-");
+  maxx=getmaxx();
   ellipse(450,130,0,300,100,50); //Drawing a Ellipse
   gotoxy(1,16); //Placing cursor on new location
   printf("Drawing a Sector :-");
@@ -46,11 +50,12 @@ void main()
   printf("\n\nPress any key to goto next screen...");
   getch(); //Pause to get user input
   cleardevice(); //Clearing screen
+  maxx=getmaxx();
   gotoxy(1,6); //Placing cursor on a new location
   printf("Drawing a Polygon :-");
   drawpoly(4,pts); //Draw a polygon
   gotoxy(1,25); //Placing cursor on a new location
   printf("\n\nPress any key to End Program ...");
   getch(); //Pause to get the user input
-  closegraph(); //Closing graphics mode
+  closegraph(); 
 }
